@@ -3,12 +3,12 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config()
 var db  = require('./db.js')
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 const userRouter =  require('./routes/user');
 const noticeRouter = require('./routes/notice')
 var attendanceRouter = require('./routes/attendance')
 var feesRouter = require('./routes/fees')
-const base = process.env.BASE_URL
+const base = process.env.BASE_URL ||'/api/v1'
 
 
 app.use(cors());
